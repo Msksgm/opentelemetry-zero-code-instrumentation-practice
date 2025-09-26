@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: opentelemetry-zero-code-instrumentation-practice
+otel:
+  propagators:
+    - tracecontext
+    - b3

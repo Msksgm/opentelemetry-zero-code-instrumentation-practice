@@ -34,6 +34,13 @@ dependencies {
 	implementation(platform("io.opentelemetry:opentelemetry-bom:1.44.0"))
 	implementation(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:2.10.0"))
 	implementation("io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter")
+
+	// 用途
+	// Propagator Distribution（tracecontext、b3）に必要
+	// - https://opentelemetry.io/docs/specs/otel/context/api-propagators/#propagators-distribution
+	// 変更点
+	// - application.yaml（application.properties）に otel.propagators=tracecontext,b3 を追加するとき
+	implementation("io.opentelemetry:opentelemetry-extension-trace-propagators")
 }
 
 kotlin {
