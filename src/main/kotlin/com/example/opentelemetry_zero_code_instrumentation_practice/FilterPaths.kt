@@ -12,7 +12,7 @@ class FilterPaths {
 
     // actuator パスをフィルタリングするカスタマイズ
     @Bean
-    fun otelCustomizer(): AutoConfigurationCustomizerProvider {
+    fun otelFilterPathCustomizer(): AutoConfigurationCustomizerProvider {
         return AutoConfigurationCustomizerProvider { p ->
             p.addSamplerCustomizer { fallback, config ->
                 RuleBasedRoutingSampler.builder(SpanKind.SERVER, fallback)
