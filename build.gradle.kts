@@ -41,6 +41,16 @@ dependencies {
 	// 変更点
 	// - application.yaml（application.properties）に otel.propagators=tracecontext,b3 を追加するとき
 	implementation("io.opentelemetry:opentelemetry-extension-trace-propagators")
+
+	// 名前
+	// - opentelemetry-samplers
+	// Maven Repository の URL
+	// - https://mvnrepository.com/artifact/io.opentelemetry.contrib/opentelemetry-samplers
+	// 用途
+	// - サンプリングのカスタマイズに必要
+	// - このリポジトリでは、actuator の drop に使用する
+	implementation("io.opentelemetry.contrib:opentelemetry-samplers:1.33.0-alpha")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
 }
 
 kotlin {
