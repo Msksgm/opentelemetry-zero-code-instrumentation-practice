@@ -51,6 +51,15 @@ dependencies {
 	// - このリポジトリでは、actuator の drop に使用する
 	implementation("io.opentelemetry.contrib:opentelemetry-samplers:1.33.0-alpha")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+	// 名前
+	// - spring-boot-starter-aop
+	// Maven Repository の URL
+	// - https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
+	// 用途
+	// - アノテーションを利用したトレースに必要
+	// - AOP であるため、アノテーションを付与しただけでは動作せず、Constructor Injection などでインスタンス化する必要がある
+	implementation("org.springframework.boot:spring-boot-starter-aop")
 }
 
 kotlin {
